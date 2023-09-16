@@ -1,8 +1,7 @@
 const data = [
   { name: "john", age: 24, profession: "developer" },
   { name: "jane", age: 27, profession: "admin" },
-  { name: "Ankita", age: 16, profession: "manager" },
-  { name: "Bitch", age: 22, profession: "admin" },
+  
 ];
 
 // 1. Print Developers
@@ -42,7 +41,16 @@ function concatenateArray() {
 
 // 5. Average Age
 function averageAge() {
-  data.reduce()
+  let SumAge = 0;
+
+  
+  for (let i = 0; i < data.length; i++) {
+    SumAge += data[i].age;
+  }
+
+  const averageAge = SumAge / data.length;
+
+  console.log(averageAge)
 }
 
 // 6. Age Check
@@ -68,7 +76,8 @@ function uniqueProfessions() {
 
 // 8. Sort by Age
 function sortByAge() {
-  return data.sort((a, b)=> a.age - b.age)
+   data.sort((a, b)=> a.age - b.age)
+  console.log(data)
 }
 
 // 9. Update Profession
